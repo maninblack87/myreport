@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 해당 XML은 Java EE 규칙을 따른다. -->
+<!-- xsi : XML 문법 검사 기능을 쓰겠다. -->
+<!-- schemaLocation : XML 구조 정의 (xsd) -->
+<!-- version : Servlet 버전 -->
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+            version="4.0">
+
+    <display-name>My Report</display-name>
+
+    <!-- 서블릿 : 서버안에서 실행되는 프로그램 -->
+        <!-- 서블릿이 생성되면 그때 작성 -->
+
+    <!-- 필터 : 서블릿 실행 전후에 실행되는 프로그램 -->
+    <!-- UTF-8 인코딩, 로깅, 권한 검사 등 -->
+        <!-- UTF-8 인코딩, 로깅, 권한 검사 등이 필요해지면 작성 -->
