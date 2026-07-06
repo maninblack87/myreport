@@ -15,8 +15,8 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>21</maven.compiler.source>
-        <maven.compiler.target>21</maven.compiler.target>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
     </properties>
 
     <!-- 의존성 : 라이브러리, 모듈, 데이터베이스 드라이버, 테스트 도구, API, 로깅 도구, Starter(의존성 묶음) 등 외부 구성 요소를 가리킴 -->
