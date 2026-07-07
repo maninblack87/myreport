@@ -1,6 +1,10 @@
 <!-- includes/header.jsp -->
 
-<%@ page language="java" contentType="text/html; charset=UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" isELIgnored="false">
+
+<!-- jstl 표준 코어 라이브러리를 사용하겠다. -->
+<!-- 예 : <c:forEach> -->
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <html lang="en">
     <head>
@@ -17,7 +21,8 @@
                         <a href="${pageContext.request.contextPath}">Home</a>
                     </div>
                     <div class="my-account">
-                        <p>준비 중입니다</p>
+                        <c:choose>
+                        </c:choose>
                     </div>
                 </div>
             </div>
