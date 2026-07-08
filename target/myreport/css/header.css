@@ -1,0 +1,45 @@
+/* header.css */
+header {
+    width: 100%;
+    height: 400px;
+    padding-top: 20px;
+    background-image: url("../img/main-image.png");
+}
+
+#hd1 {
+    width: 1000px;
+    height: 35px;
+    margin: 0 auto;
+    background-color: #343434;
+    border-radius: 15px;
+    padding-top: 3px;
+}
+#hd1 a {
+    color: white;
+}
+
+/* 로고 */
+#hd1 .container .logo{
+    float:left;
+    margin-left: 20px;
+}
+
+/* 메뉴 */
+#hd1 .container .menu{
+    float:left;
+    margin-left: 24%;
+}
+#hd1 .container .menu li {
+    display: inline;
+    margin: 0 10px;
+}
+
+/* 계정 정보 */
+#hd1 .container .my-account{
+    float:right;
+    margin-right: 20px;
+}
+#hd1 .container .my-account a:first-child{
+    margin-right: 20px;
+}
+

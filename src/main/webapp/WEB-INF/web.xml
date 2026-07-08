@@ -11,6 +11,17 @@
 
     <display-name>My Report</display-name>
 
+    <!-- 경로 -->
+    <servlet-mapping>
+        <servlet-name>default</servlet-name>
+        <url-pattern>/css/*</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>default</servlet-name>
+        <url-pattern>/img/*</url-pattern>
+    </servlet-mapping>
+
     <!-- 서블릿 : 서버안에서 실행되는 프로그램 -->
     <servlet>
         <servlet-name>HomeServlet</servlet-name>
@@ -21,6 +32,17 @@
         <servlet-name>HomeServlet</servlet-name>
         <url-pattern>/</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>JoinServlet</servlet-name>
+        <servlet-class>com.myreport.servlet.JoinServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>JoinServlet</servlet-name>
+        <url-pattern>/join</url-pattern>
+    </servlet-mapping>
+
 
     <!-- 필터 : 서블릿 실행 전후에 실행되는 프로그램 -->
     <!-- UTF-8 인코딩, 로깅, 권한 검사 등 -->

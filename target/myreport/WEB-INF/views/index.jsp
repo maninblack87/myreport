@@ -1,4 +1,15 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" isELIgnored="false" pageEncoding="UTF-8" %>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Report</title>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/myreport.css">
+</head>
+
+<body>
 
 <%@ include file="/WEB-INF/views/includes/header.jsp" %>
 
@@ -14,3 +25,7 @@
 </main>
 
 <%@ include file="/WEB-INF/views/includes/footer.jsp" %>
+    
+</body>
+
+</html>
