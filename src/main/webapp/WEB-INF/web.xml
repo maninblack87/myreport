@@ -35,12 +35,12 @@
 
     <servlet>
         <servlet-name>JoinServlet</servlet-name>
-        <servlet-class>com.myreport.servlet.JoinServlet</servlet-class>
+        <servlet-class>com.myreport.servlet.users.JoinServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
         <servlet-name>JoinServlet</servlet-name>
-        <url-pattern>/join</url-pattern>
+        <url-pattern>/users/join</url-pattern>
     </servlet-mapping>
 
 

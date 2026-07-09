@@ -1,5 +1,11 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" isELIgnored=false %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" isELIgnored="false" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
+<html lang="en">
+
+<%@ include file="/WEB-INF/views/includes/head.jsp" %>
+
+<body>
 
 <%@ include file="/WEB-INF/views/includes/header.jsp" %>
 
@@ -55,3 +61,7 @@
 </main>
 
 <%@ include file="/WEB-INF/views/includes/footer.jsp" %>
+
+</body>
+
+</html>

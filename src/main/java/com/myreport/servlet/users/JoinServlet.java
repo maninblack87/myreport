@@ -27,7 +27,7 @@ public class JoinServlet extends HttpServlet {
         HttpServletRequest request,
         HttpServletResponse response
     ) throws ServletException, IOException {
-        request.getRequestDispatcher("/WEB-INF/views/users/register.jsp").forward(request, response);
+        request.getRequestDispatcher("/WEB-INF/views/users/join.jsp").forward(request, response);
     }
 
     // 함수 : 회원가입 처리

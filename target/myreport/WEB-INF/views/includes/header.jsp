@@ -4,8 +4,6 @@
 <!-- jstl 표준 코어 라이브러리를 사용하겠다. -->
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
-<link rel="stylesheet" href="${pageContext.request.contextPath}/css/header.css">
-
 <header>
 
     <div id="hd1">
