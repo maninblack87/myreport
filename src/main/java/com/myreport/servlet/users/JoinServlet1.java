@@ -81,7 +81,7 @@ public class JoinServlet1 extends HttpServlet {
             newUser.append("password", password);
             newUser.append("role", "user");
 
-            users.inserOne(newUser);
+            users.insertOne(newUser);
             
         }
 

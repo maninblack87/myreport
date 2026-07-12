@@ -36,7 +36,7 @@
                     <div class="form-group">
                         <label for="ipt-pw">비밀번호</label>
                         <input type="password" id="ipt-pw" name="password" required>
-                        <span id="id-error" class="error-msg">문자 2~25자 제한</span>
+                        <span id="pw-error" class="error-msg">문자 2~25자 제한</span>
                     </div>
 
                     <!-- 비밀번호 확인 -->

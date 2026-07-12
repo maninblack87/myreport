@@ -1,4 +1,5 @@
 com\myreport\servlet\users\CheckIdServlet.class
+com\myreport\servlet\users\JoinServlet1.class
 com\myreport\servlet\users\DetailServlet.class
 com\myreport\servlet\users\JoinServlet.class
 com\myreport\servlet\users\LogoutServlet.class
