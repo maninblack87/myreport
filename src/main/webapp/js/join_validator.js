@@ -26,7 +26,18 @@ document.addEventListener('DOMContentLoaded', function(){
             idError.innerText = "문자 5~25 글자 제한";
             idError.className = "error-msg";
             idInput.dataset.duplicate = "true";
+            stateSubmitButton();
+            return;
         }
+
+        fetch(`${path}/users/checkId?id=${idInputVal}`)
+            .then(res => res.json())
+            .then(data => {
+                if (data.isDuplicate) {
+                    isError.innerText = "사용가능한 아이디"
+                }
+            })
+
     }
 
 })
