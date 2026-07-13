@@ -19,10 +19,21 @@
 
                 <h2 class="contend-heading">회원가입</h2>
 
-                <c:if test="${param.error eq 'true'}">
-                    <p style="color:red; text-align:center; margin-bottom:15px;">입력한 값에 의한 오류</p>
+                <!-- 에러 메세지 -->
+                <c:if test="${param.error eq 'idLength'}">
+                    <p style="color:red;">아이디는 5~25자여야 합니다.</p>
+                </c:if>
+                <c:if test="${param.error eq 'passwordLength'}">
+                    <p style="color:red;">비밀번호는 5~25자여야 합니다.</p>
+                </c:if>
+                <c:if test="${param.error eq 'duplicate'}">
+                    <p style="color:red;">이미 사용 중인 아이디입니다.</p>
+                </c:if>
+                <c:if test="${param.error eq 'serverError'}">
+                    <p style="color:red;">서버 오류가 발생했습니다. 잠시 후 다시 시도해 주세요.</p>
                 </c:if>
 
+                <!-- 회원가입 폼 -->
                 <form action="${pageContext.request.contextPath}/users/join" method="POST">
 
                     <!-- 아이디 -->

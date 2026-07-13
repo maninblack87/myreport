@@ -6,4 +6,7 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/header.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/footer.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/users.css">
+    <script>
+        window.contextPath = "${pageContext.request.contextPath}"
+    </script>
 </head>

@@ -27,7 +27,7 @@ public class JoinServlet1 extends HttpServlet {
         HttpServletRequest request,
         HttpServletResponse response
     ) throws ServletException, IOException {
-        request.getRequestDispatcher("/WEB-INF/views/users.join.jsp").forward(request, response);
+        request.getRequestDispatcher("/WEB-INF/views/users/join.jsp").forward(request, response);
     }
 
     // 함수 : 회원가입 처리
@@ -75,14 +75,30 @@ public class JoinServlet1 extends HttpServlet {
                 return;
             }
 
+            // 비밀번호 해싱
+            String hashedPassword = PasswordUtil.hashPassword(password);
+
             // 회원 저장
             Document newUser = new Document();
             newUser.append("id", id);
-            newUser.append("password", password);
+            newUser.append("password", hashedPassword);
             newUser.append("role", "user");
 
             users.insertOne(newUser);
+
+            // 회원가입 성공 후 로그인 페이지로 리다이렉트
+            response.sendRedirect(
+                request.getContextPath() + "/users/login?success=joined"
+            );
             
+        } catch (Exception e) {
+
+            // 서버 오류 발생 시 에러 로그 출력 및 에러 페이지로 리다이렉트
+            e.printStackTrace();
+            response.sendRedirect(
+                request.getContextPath() + "/users/join?error=serverError"
+            );
+
         }
 
     }
