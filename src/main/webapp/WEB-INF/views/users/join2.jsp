@@ -6,31 +6,31 @@
 <%@ include file="/WEB-INF/views/includes/head.jsp" %>
 
 <body>
-
+    
 <%@ include file="/WEB-INF/views/includes/header.jsp" %>
 
 <main>
-    
+
     <div class="container">
 
         <section class="content">
 
             <div class="join-box">
 
-                <h2 class="contend-heading">회원가입</h2>
+                <h2 class="content-heading">회원가입</h2>
 
                 <!-- 에러 메세지 -->
                 <c:if test="${param.error eq 'idLength'}">
-                    <p style="color:red;">아이디는 5~25자여야 합니다.</p>
+                    <p style="color:red">아이디는 5~25 글자이어야 합니다</p>
                 </c:if>
                 <c:if test="${param.error eq 'passwordLength'}">
-                    <p style="color:red;">비밀번호는 5~25자여야 합니다.</p>
+                    <p style="color:red">비밀번호는 5~25 글자이어야 합니다</p>
                 </c:if>
                 <c:if test="${param.error eq 'duplicate'}">
-                    <p style="color:red;">이미 사용 중인 아이디입니다.</p>
+                    <p style="color:red">이미 사용중인 아이디 입니다</p>
                 </c:if>
                 <c:if test="${param.error eq 'serverError'}">
-                    <p style="color:red;">서버 오류가 발생했습니다. 잠시 후 다시 시도해 주세요.</p>
+                    <p style="color:red">서버 오류가 발생했습니다. 잠시 후 다시 시도해 주세요.</p>
                 </c:if>
 
                 <!-- 회원가입 폼 -->
@@ -54,7 +54,7 @@
                     <div class="form-group">
                         <label for="cnf-pw">비밀번호 확인</label>
                         <input type="password" id="cnf-pw" name="confirm-password" required>
-                        <span id="cnf-pw-error" class="error-msg"></span>
+                        <span id="cnf-error" class="error-msg"></span>
                     </div>
 
                     <!-- 버튼 셋 -->
