@@ -46,7 +46,20 @@
                     <!-- 비밀번호 -->
                     <div class="form-group">
                         <label for="ipt-pw">비밀번호</label>
-                        
+                        <input type="password" id="ipt-pw" name="password" required>
+                        <span id="pw-error" class="error-msg"></span>
+                    </div>
+
+                    <!-- 비밀번호 확인 -->
+                    <div class="form-group">
+                        <label for="cnf-pw">비밀번호 확인</label>
+                        <input type="password" id="cnf-pw" name="confirm-password" required>
+                        <span id="cnf-pw-error" class="error-msg"></span>
+                    </div>
+
+                    <!-- 버튼 셋 -->
+                    <div class="btn-set">
+                        <button type="submit" id="btn-submit">가입하기</button>
                     </div>
 
                 </form>
@@ -58,6 +71,8 @@
     </div>
 
 </main>
+
+<%@ include file="/WEB-INF/views/includes/footer.jsp" %>
 
 </body>
 
