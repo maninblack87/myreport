@@ -26,7 +26,7 @@
                 <c:if test="${param.error eq 'passwordLength'}">
                     <p style="color:red">비밀번호는 5~25 글자이어야 합니다</p>
                 </c:if>
-                <c:if test="${param.error eq 'duplicate'}">
+                <c:if test="${param.error eq 'idDuplicate'}">
                     <p style="color:red">이미 사용중인 아이디 입니다</p>
                 </c:if>
                 <c:if test="${param.error eq 'serverError'}">
