@@ -1,9 +1,10 @@
 /* header.css */
 header {
     width: 100%;
-    height: 400px;
+    height: 55px;   /* 상단 패딩 20px + 메인 메뉴 35px */
     padding-top: 20px;
-    background-image: url("../img/main-image.png");
+    position: relative;
+    z-index: 100;
 }
 
 #hd1 {

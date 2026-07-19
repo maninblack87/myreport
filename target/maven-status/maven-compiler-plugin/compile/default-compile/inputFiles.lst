@@ -3,7 +3,6 @@ C:\jeon\myreport\src\main\java\com\myreport\servlet\HomeServlet.java
 C:\jeon\myreport\src\main\java\com\myreport\servlet\users\CheckIdServlet.java
 C:\jeon\myreport\src\main\java\com\myreport\servlet\users\DetailServlet.java
 C:\jeon\myreport\src\main\java\com\myreport\servlet\users\JoinServlet.java
-C:\jeon\myreport\src\main\java\com\myreport\servlet\users\JoinServlet1.java
 C:\jeon\myreport\src\main\java\com\myreport\servlet\users\LoginServlet.java
 C:\jeon\myreport\src\main\java\com\myreport\servlet\users\LogoutServlet.java
 C:\jeon\myreport\src\main\java\com\myreport\util\PasswordUtil.java

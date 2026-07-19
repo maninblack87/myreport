@@ -12,11 +12,11 @@ document.addEventListener('DOMContentLoaded', function(){
 
     // [함수] 가입 버튼 상태 활성화/비활성화
     function stateSubmitButton(){
-        const isIdValid = idInput.value.length >= 5 && idInput.valu.length <= 25 && !idInput.dataset.duplicate;
+        const isIdValid = idInput.value.length >= 5 && idInput.value.length <= 25 && !idInput.dataset.duplicate;
         const isPwValid = pwInput.value.length >= 5 && pwInput.value.length <= 25;
         const isCnfValid = cnfPwInput.value != "" && pwInput.value === cnfPwInput.value;
 
-        submitBtn.disabled = !(isIdValid && isPwValid && isCnfValid);
+        submitBtn.disabled = !(isIdValid &&  isPwValid && isCnfValid);
     }
 
     // [함수] 아이디 체크
@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', function(){
     // 이벤트 초기화 (직접 연결)
     idInput.addEventListener('blur', checkDuplicateId);
     pwInput.addEventListener('input', checkPasswordLength);
-    pwInput.addEventListener('input', checkPasswordLength);
+    pwInput.addEventListener('input', checkMatch);
     cnfPwInput.addEventListener('input', checkMatch);
 
     // 초기 버튼 상태 체크

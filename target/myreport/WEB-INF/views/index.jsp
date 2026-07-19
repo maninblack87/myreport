@@ -9,9 +9,7 @@
 <%@ include file="/WEB-INF/views/includes/header.jsp" %>
 
 <main>
-    <section class="main-image">
-
-    </section>
+    <%@ include file="/WEB-INF/views/includes/slider.jsp" %>
     <section class="feature">
         <div class="container">
             <h1>메인 페이지 콘텐츠</h1>
