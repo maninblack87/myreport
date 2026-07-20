@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/footer.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/users.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/slider.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/sub_top.css">
 
     <!-- 스크립트 -->
     <script src="${pageContext.request.contextPath}/js/join_validator.js"></script>

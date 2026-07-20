@@ -2,8 +2,10 @@
 
 footer {
     position: fixed;
+    z-index: 100;
     width: 100%;
     height: 50px;
+    bottom: 0;
     background-color: #343434;
     color: white;
 }

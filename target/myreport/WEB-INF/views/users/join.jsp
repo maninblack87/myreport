@@ -10,6 +10,8 @@
 <%@ include file="/WEB-INF/views/includes/header.jsp" %>
 
 <main>
+
+    <%@ include file="/WEB-INF/views/includes/sub_top.jsp" %>
     
     <div class="container">
 
