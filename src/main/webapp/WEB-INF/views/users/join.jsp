@@ -19,7 +19,7 @@
 
             <div class="join-box">
 
-                <h2 class="contend-heading">회원가입</h2>
+                <h2 class="content-heading">회원가입</h2>
 
                 <!-- 에러 메세지 -->
                 <c:if test="${param.error eq 'idLength'}">

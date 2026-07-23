@@ -1,37 +1,42 @@
 document.addEventListener('DOMContentLoaded', function(){
-
     const idInput = document.getElementById('ipt-id');
     const pwInput = document.getElementById('ipt-pw');
     const cnfPwInput = document.getElementById('cnf-pw');
     const submitBtn = document.getElementById('btn-submit');
-
     const path = window.contextPath;
 
+
     function stateSubmitButton(){
-        const isIdValid = idInput.value.length >= 5 && idInput.value.length <= 25 && !idInput.dataset.duplicate;
+        const isIdValid = idInput.value.length >= 5 && idInput.value.length <= 25 && idInput.dataset.duplicate;
         const isPwValid = pwInput.value.length >= 5 && pwInput.value.length <= 25;
-        const isCnfValid = cnfPwInput.value != "" && pwInput.value === cnfPwInput.value;
+        const isCnfValid = cnfPwInput.value != "" && cnfPwInput.value === pwInput.value;
 
         submitBtn.disabled = !(isIdValid && isPwValid && isCnfValid);
-    }
+    };
+
 
     const checkDuplicateId = () => {
         const idError = document.getElementById('id-error');
-        const idInputVal = idInput.value;
-
-        if (idInputVal.length < 5 || idInputVal.length > 25){
+        
+        // 1.아이디 길이
+        if (idInput.value.length < 5 && idInput.value.length > 25){
             idError.innerText = "문자 5~25 글자 제한";
             idError.className = "error-msg";
-            idInput.dataset.duplicate = "true";     // dataset : HTML에서 data-* 속성을 다루는 객체
+            idInput.dataset.duplicate = "true";
             stateSubmitButton();
             return;
         }
 
-        fetch(`${path}/users/checkId?id=${idInputVal}`)
+        // 2.아이디 중복
+        fetch(`${path}/users/checkId?id=${idInput.value}`)
             .then(res => res.json())
             .then(data => {
                 if (data.isDuplicate){
                     idError.innerText = "아이디 중복";
+                    idError.className = "error-msg";
+                    idInput.dataset.duplicate = "true";
+                } else {
+                    idError.innerText = "사용가능한 아이디";
                     idError.className = "success-msg";
                     delete idInput.dataset.duplicate;
                 }
@@ -42,6 +47,7 @@ document.addEventListener('DOMContentLoaded', function(){
             });
     };
 
+
     const checkPasswordLength = () => {
         const pwError = document.getElementById("pw-error");
 
@@ -49,11 +55,12 @@ document.addEventListener('DOMContentLoaded', function(){
             pwError.innerText = "문자 5~25 글자 제한";
             pwError.className = "error-msg";
         } else {
-            pwError.innerText = "사용가능한 비밀번호";
+            pwError.InnerText = "사용가능한 비밀번호";
             pwError.className = "success-msg";
         }
         stateSubmitButton();
     };
+
 
     const checkMatch = () => {
         const cnfError = document.getElementById("cnf-pw-error");
@@ -66,14 +73,15 @@ document.addEventListener('DOMContentLoaded', function(){
             cnfError.className = "success-msg";
         }
         stateSubmitButton();
-    }
+    };
 
-    // 이벤트 직접 연결
+
     idInput.addEventListener('blur', checkDuplicateId);
     pwInput.addEventListener('input', checkPasswordLength);
     pwInput.addEventListener('input', checkMatch);
+    cnfPwInput.addEventListener('input', checkMatch);
 
-    // 초기 버튼 상태 체크 호출
     stateSubmitButton();
+
 
 })
